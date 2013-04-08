@@ -1,0 +1,23 @@
+#! /usr/bin/octave -qf
+%% expects kFoldScript k id prefix alg selection selectionper
+source('globals.m')
+arg_list = argv();
+
+if(nargin < 4)
+  printf('ERROR Insufficient Args')
+  return
+end
+
+d=sprintf('log/%s',arg_list{3});
+f=sprintf('log/%s/%s.log',arg_list{3},arg_list{3});
+mkdir(d);
+diary(f);
+
+
+if(nargin == 4)	  	  
+	  kFoldCrossVal(str2double(arg_list{1}), str2double(arg_list{2}),arg_list{3},str2double(arg_list{4}))
+else
+	kFoldCrossVal(str2double(arg_list{1}), str2double(arg_list{2}),arg_list{3},str2double(arg_list{4}), str2double(arg_list{5}), str2double(arg_list{6})/100.0)
+end
+
+diary off

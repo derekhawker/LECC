@@ -1,0 +1,39 @@
+#! /usr/bin/octave -qf
+%% expects treeScript id prefix alg selection selectionper
+source('globals.m')
+arg_list = argv();
+
+prefix=arg_list{2};
+d=sprintf('log/%s',prefix);
+mkdir(d);
+f = sprintf('log/%s/%s.log',prefix,prefix);
+diary(f);
+id=str2double(arg_list{1});
+if(nargin > 2)
+	  alg=str2double(arg_list{3});
+	  sel=str2double(arg_list{4});
+	  per=str2double(arg_list{5});
+end
+
+switch(alg)	
+   case(1)
+      [tree, unpruned, solved] = genDecTree(id, sel, per/100.0, 0);
+   case(2)
+      [tree, unpruned, solved] = genDecTree(id, sel, per/100.0, 1);
+   case(3)
+      [tree, unpruned] = genDecTreeSINF(id);
+end
+
+f = sprintf('log/%s/UNPRUNED.txt',prefix);
+outputDecTreeToFile(unpruned,f);
+f = sprintf('log/%s/UNPRUNED.tree',prefix);
+decTreeTextFile(unpruned,f);
+f = sprintf('log/%s/UNPRUNED.out',prefix);
+save(f,'unpruned');
+f = sprintf('log/%s/Tree.txt',prefix);
+outputDecTreeToFile(tree,f);
+f = sprintf('log/%s/Tree.tree',prefix);
+decTreeTextFile(tree,f);
+f = sprintf('Tree.out');
+save(strcat('log/',prefix,'/',f), 'tree');
+diary off;

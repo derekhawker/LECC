@@ -1,0 +1,11 @@
+../datasets/bujuj-gum/bujuj.data ../datasets/bujuj-gum/bujuj.fc ../datasets/bujuj-gum/bujuj.mc
+../datasets/pima-indians/pima-indians-diabetes.data ../datasets/pima-indians/pima-indians-diabetes.fc ../datasets/pima-indians/pima-indians-diabetes.mc
+../datasets/statlog-heart/heart.data ../datasets/statlog-heart/heart.fc ../datasets/statlog-heart/heart.mc
+../datasets/thyroid/ann-train.data ../datasets/thyroid/ann-train.fc ../datasets/thyroid/ann-train.mc
+../datasets/musk/musk.data ../datasets/musk/musk.fc ../datasets/musk/musk.mc
+../datasets/glass/float.data ../datasets/glass/float.fc ../datasets/glass/float.mc
+../datasets/ionosphere/ionosphere.data ../datasets/ionosphere/ionosphere.fc ../datasets/ionosphere/ionosphere.mc
+../datasets/bupa-alcohol/bupa-alcohol.data ../datasets/bupa-alcohol/bupa.fc ../datasets/bupa-alcohol/bupa.mc
+../datasets/breast-diagnostic/wdbc.data ../datasets/breast-diagnostic/wdbc.fc ../datasets/breast-diagnostic/wdbc.mc
+../datasets/CTG/CTG.data ../datasets/CTG/CTG.fc ../datasets/CTG/CTG.mc
+../datasets/skin/skin.data ../datasets/skin/skin.fc ../datasets/skin/skin.mc
