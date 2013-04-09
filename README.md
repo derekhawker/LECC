@@ -20,14 +20,14 @@ Once your dataset is created in the dataset folder, go to src/inc and add an app
 
 ## Creating a Single Decision Tree ##
 ### Choose an Algorithm ###
-#### int: #### Dr. J.W. Chinneck's int method.  This was the foundation for our algorithm design.  It is an accuracy-based classifier and is included for comparison.
-#### lecc:  #### This is the main variant of our algorithm and in general gives the best performance.
-#### leccm:  #### In some cases this modified version of the lecc algorithm gives the best results.  It modifies the way in which nodes are divided.  We recommend that if you have the time you run this in addition to the lecc algorithm and see which has the best performance.
+#### int:  Dr. J.W. Chinneck's int method.  This was the foundation for our algorithm design.  It is an accuracy-based classifier and is included for comparison.
+#### lecc:   This is the main variant of our algorithm and in general gives the best performance.
+#### leccm:   In some cases this modified version of the lecc algorithm gives the best results.  It modifies the way in which nodes are divided.  We recommend that if you have the time you run this in addition to the lecc algorithm and see which has the best performance.
 
 ### Choose a Selection Method (if using lecc or leccm) ###
-#### N%: #### If you enter a number between 1 and 100, the algorithm that divides nodes will used the given percentage of candidates.  This may speed up the creation of the tree but it may also lead to some increase in expected cost.  
-#### Two Candidate: ####If you enter 200, the algorithm that divides nodes will only use the top two candidates.
-#### Default: #### If you do not enter anything, the method will use all of the candidates (equivalent to entering 100).
+#### N%:  If you enter a number between 1 and 100, the algorithm that divides nodes will used the given percentage of candidates.  This may speed up the creation of the tree but it may also lead to some increase in expected cost.  
+#### Two Candidate: If you enter 200, the algorithm that divides nodes will only use the top two candidates.
+#### Default:  If you do not enter anything, the method will use all of the candidates (equivalent to entering 100).
 
 A full discussion of the algorithms and selection methods may be found in our report.
 
