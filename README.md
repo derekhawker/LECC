@@ -20,8 +20,8 @@ Once your dataset is created in the dataset folder, go to src/inc and add an app
 
 ## Creating a Single Decision Tree ##
 ### Choose an Algorithm ###
-#### int: Dr. J.W. Chinneck's int method.  This was the foundation for our algorithm design.  It is an accuracy-based classifier and is included for comparison.
-#### lecc: #### This is the main variant of our algorithm and in general gives the best performance.
+#### int: #### Dr. J.W. Chinneck's int method.  This was the foundation for our algorithm design.  It is an accuracy-based classifier and is included for comparison.
+#### lecc:  #### This is the main variant of our algorithm and in general gives the best performance.
 #### leccm:  #### In some cases this modified version of the lecc algorithm gives the best results.  It modifies the way in which nodes are divided.  We recommend that if you have the time you run this in addition to the lecc algorithm and see which has the best performance.
 
 ### Choose a Selection Method (if using lecc or leccm) ###
