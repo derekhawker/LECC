@@ -1,3 +1,5 @@
+## Modified 2013 Campbell Hennessy <chennes2@connect.carleton.ca>
+## - Added lambda output
 ## Copyright (C) 2009 Luca Favatella <slackydeb@gmail.com>
 ##
 ## This program is free software; you can redistribute it and/or modify it under
