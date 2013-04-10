@@ -1,0 +1,21 @@
+
+##Programmers Manual
+Here are the key functions to consider when modifying the system.
+
+(kFoldCrossVal.m)
+if intending to run k-fold cross validation tests, this is the first Octave file that gets called. Algorithms variants are implemented in a case statement that calls decision tree function that implement the new algorithm. 
+
+(genDecTree.m, genDecTreeSINF.m)
+Typically these are called by the kFoldCrossVal() function, though they can be called directly(see treeScript). Algorithmic changes are partially implemented by creating genDecTreeXXXXXX.m files. For example, this project has genDecTree.m which implements the LECC method which uses a weight sum of infeasibilities(WSINF). There is no GenDecTreeXXXXXX.m for the LECCM method because it was possible to implement using a argument passed to genDecTree. GenDecTreeSINF is included which is based on the Integrated Method. It is similar to LECC, though they differ in key ways, such as the calls they make. In order to validate your new method with k-fold cross validation, the case statement in kFoldCrossVal must be updated to include an option to call your new method. These function are mainly responsible for passing algorithm choices onto the functions that do implement them: GenDCHyper, GenSINFHyper.
+
+(GenDCHyper.m, GenSINFHyper.m)
+This is where new algorithms are implemented. This function is responsible for generating hyperplanes and returns the input node population as two split nodes. This is where different candidate selection methods are implemented, as well as LECCM. The Integrated method was sufficiently different from the LECC to require a new file be made in order to implement it (GenSINFHyper). Just about every function call can be traced back to GenXXHyper functions.
+
+
+(linprog)
+This function is responsible for calling the LP Solver. If a different LP Solver is desired, start by modifying this call. The overhead is generally negligible compared to the LP Solver itself.
+
+(CreatePopulation)
+A global population state contain details about the LP solution such as the constraints, objective function, and relevant dataset info. If moving to a new LP Solver, it may be worth considering switching how the Population structure is constructed, though be warned, that many functions (ClassifyInst for example) make inferences about the real class of a datapoint by querying the Population struct. It will not be simple fix, to alter the Population struct.
+
+
