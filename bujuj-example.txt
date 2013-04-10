@@ -1,0 +1,12 @@
+Step by step for running a 10-fold validation of Bujuj dataset
+./LECC -i 1 -o BUJUJ -a lecc -s 100 -k 10
+
+
+More details: 
+We supply the '-i' argument with 1 because the Bujuj dataset locations are on line 1 of the file 'src/inc/datasetLocationsTable.txt'. If we wanted to run the Skin dataset, we would change the 1 to 11
+
+The '-o' gives a name for the folder we use to store trees output by the each k-iteration of the crossfold validation and other meaningful output. This folder is found in the 'src/log' directory.
+
+The '-a' argument indicates the algorithm variant we want to use. 'lecc' and 'leccm' were created for the purposes of this project. 'int' was the base algorithm that they built on. 
+
+The '-k' argument indicates we want to use k=10 for k-fold cross validation. The dataset is split into 10 bins and ten unique tests are run. 
